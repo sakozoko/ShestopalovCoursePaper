@@ -1,0 +1,37 @@
+﻿<Window x:Class="CourseWork.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="230" Width="270">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20px" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20px" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20px" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20px" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row='0' FontSize="18" Grid.Column="0" Text="Доброго дня!" />
+            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="Username" />
+            <WrapPanel Margin="20" MaxWidth="300" Grid.Row="2"  HorizontalAlignment="Center">
+                <Button Margin="5" Width="75" Height="25" Content="Login" Click="Login_Click" />
+                <Button Margin ="5" Width="75" Height="25" x:Name="Register" IsEnabled="false" Content="Register" Click="Register_Click" />
+            </WrapPanel>
+            <Button Width="210" HorizontalAlignment="Center" Height="25" Grid.Row="3" Grid.Column="0" Content="Secured resource"
+                    Click="Secured_Click" />
+        </Grid>
+    </Grid>
+</Window>

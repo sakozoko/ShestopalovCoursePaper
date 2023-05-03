@@ -1,0 +1,38 @@
+<Window x:Class="CourseWork.Views.SecuredResourceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="SecuredResourceWindow" Height="600" Width="400">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="5px" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="5px" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="5px" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="5px" />
+    </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock FontSize="18" Text="Secured Resource" />
+            <TextBlock Visibility="Collapsed" x:Name="TextBlock" FontSize="12" TextWrapping="Wrap" Text="
+            The Data Encryption Standard (DES /ˌdiːˌiːˈɛs, dɛz/) is a symmetric-key algorithm for the encryption of digital data. Although its short key length of 56 bits makes it too insecure for modern applications, it has been highly influential in the advancement of cryptography.
+Developed in the early 1970s at IBM and based on an earlier design by Horst Feistel, the algorithm was submitted to the National Bureau of Standards (NBS) following the agency's invitation to propose a candidate for the protection of sensitive, unclassified electronic government data. In 1976, after consultation with the National Security Agency (NSA), the NBS selected a slightly modified version (strengthened against differential cryptanalysis, but weakened against brute-force attacks), which was published as an official Federal Information Processing Standard (FIPS) for the United States in 1977.[2]
+The publication of an NSA-approved encryption standard led to its quick international adoption and widespread academic scrutiny.
+ Controversies arose from classified design elements, a relatively short key length of the symmetric-key block cipher design, 
+ and the involvement of the NSA, raising suspicions about a backdoor. The S-boxes that had prompted those suspicions were designed by
+  the NSA to remove a backdoor they secretly knew (differential cryptanalysis). However, the NSA also ensured that the key size was
+   drastically reduced so that they could break the cipher by brute force attack.[2]
+ The intense academic scrutiny the algorithm received over time led to the modern understanding of block ciphers and their cryptanalysis." />
+            <TextBlock x:Name="SecuredResource" />
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Margin="10" Width="100" Height="25" Content="Logout" Click="Logout_Click" />
+                <Button Margin="10" Width="100" Height="25" Content="Back" Click="Back_Click" />
+                </WrapPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
